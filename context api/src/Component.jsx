@@ -3,8 +3,8 @@ import { Context } from './Context.jsx';
 
 const Component = () => {
 
-    const [name,setName] = useContext(Context);
-    const [age,setAge] = useContext(Context);
+    const {name,setName} = useContext(Context);
+    const {age,setAge} = useContext(Context);
 
   return (
     <div>
