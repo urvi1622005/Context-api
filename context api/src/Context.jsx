@@ -1,13 +1,14 @@
 import React,{createContext,useState} from 'react';
 const Context = createContext();
-const Provider =({ children }) =>{
-    const[State,setState]=useState("default value");
+const Provider =({ children }) => {
+    const[name,setState]=useState("urvi");
+    const[age,setAge]=useState("19")
 
     return(
-        <Context.Provider value={[State,setState]}>
+        <Context.Provider value={{name,age,setAge,setState}}>
             {children}
         </Context.Provider>
     );
 };
 
-export {Provider,Context}
+export {Provider,Context};

@@ -1,15 +1,17 @@
 import React,{useContext} from 'react';
-import { Context } from './Context.js';
+import { Context } from './Context.jsx';
 
 const Component = () => {
 
-    const [State,setState] = useContext(Context);
+    const [name,setName] = useContext(Context);
+    const [age,setAge] = useContext(Context);
 
   return (
     <div>
-        <p>{State}</p>
-        <p>{name} </p>
-        <button onClick={() => setState("new value")}>Change Value</button>
+        <p>{name}</p>
+        <p>{age} </p>
+        <button onClick={() => setName("new value")}>Change Value</button>
+        <button onClick={() => setAge("new age")}>Change Age</button>
     </div>
   );
 
